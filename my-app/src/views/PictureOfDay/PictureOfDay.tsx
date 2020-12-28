@@ -1,8 +1,7 @@
 import { Grid } from "@material-ui/core"
-import * as React from "react"
 import { useRecoilValue } from "recoil"
-import { Popin } from "../../components/Modal/Popin"
 import { selectPictureAndDescribe } from "../../store/selector"
+import { Popin } from "../../components/Modal/Popin"
 import { useStyles } from "./PictureOfDay.styles"
 import lost from "../../img/astronaute.jpg"
 

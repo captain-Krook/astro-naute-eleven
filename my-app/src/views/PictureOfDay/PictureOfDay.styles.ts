@@ -1,8 +1,8 @@
 import { makeStyles, createStyles } from "@material-ui/core"
 
-export const useStyles = makeStyles((theme) => {
+export const useStyles = makeStyles(() => {
   return createStyles({
-    root: { marginTop: "4em", textAlign: "center" },
+    root: { margin: "4em 0 9em 0", textAlign: "center" },
     contentImgAndDescribe: {
       "& img": {
         width: "40%",

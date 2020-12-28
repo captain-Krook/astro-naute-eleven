@@ -25,6 +25,7 @@ export const Popin = ({ explanation, copyright, hdurl }: IPopinProps): JSX.Eleme
         onClose={(): void => setIsOpen(false)}
         aria-labelledby="simple-modal-title"
         aria-describedby="simple-modal-description"
+        data-testid="modal"
       >
         <div className={classes.content}>
           ABOUT

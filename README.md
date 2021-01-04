@@ -10,6 +10,11 @@ Use the package manager yarn.
 yarn install
 ```
 
+## State management
+
+Recoil JS is
+https://recoiljs.org/
+
 ## License
 
 [MIT](https://choosealicense.com/licenses/mit/)

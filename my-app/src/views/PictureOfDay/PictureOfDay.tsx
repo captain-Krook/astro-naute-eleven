@@ -4,18 +4,23 @@ import { selectPictureAndDescribe } from "../../store/selector"
 import { Popin } from "../../components/Modal/Popin"
 import { useStyles } from "./PictureOfDay.styles"
 import lost from "../../img/astronaute.jpg"
+import ReactPlayer from "react-player"
 
 export const PictureOfDay = (): JSX.Element => {
   const classes = useStyles()
   const pictureAndDescribe = useRecoilValue(selectPictureAndDescribe)
 
   if (pictureAndDescribe !== undefined) {
-    const { url, title, explanation, copyright, hdurl } = pictureAndDescribe
+    const { url, title, explanation, copyright, hdurl, media_type } = pictureAndDescribe
 
     return (
       <Grid container className={classes.root}>
         <Grid item md={12} className={classes.contentImgAndDescribe}>
-          <img src={url} alt={title} loading="lazy" />
+          {media_type === "video" ? (
+            <ReactPlayer playing={true} url={url} className={classes.video} />
+          ) : (
+            <img src={url} alt={title} loading="lazy" />
+          )}
           <h1>{title}</h1>
           <Popin explanation={explanation} copyright={copyright} hdurl={hdurl} />
         </Grid>

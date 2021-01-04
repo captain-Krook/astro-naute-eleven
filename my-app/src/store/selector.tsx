@@ -7,9 +7,11 @@ export const selectPictureAndDescribe = selector({
   get: async ({ get }) => {
     try {
       const date = get(dateState)
+
       const response = await axios.get(
         `https://api.nasa.gov/planetary/apod?date=${date}&api_key=${process.env.REACT_APP_API_KEY}`
       )
+
       return response.data
     } catch (err) {
       console.error({ error: err })

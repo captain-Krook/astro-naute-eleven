@@ -9,7 +9,7 @@ export const selectPictureAndDescribe = selector({
       const date = get(dateState)
 
       const response = await axios.get(
-        `https://api.nasa.gov/planetary/apod?date=${date}&api_key=${process.env.REACT_APP_API_KEY}`
+        `https://api.nasa.gov/planetary/apod?date=${date}&api_key=fUWyECiO38yLqpNKX8bwi6mlCo3lWiGHERnwpKdH`
       )
 
       return response.data
